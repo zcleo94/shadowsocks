@@ -1,4 +1,4 @@
-# 原文链接 https://blog.51cto.com/zero01/2064660
+
 # 1.shadowsocks
 #安装pip
 首先安装epel扩展源：
