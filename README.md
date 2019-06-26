@@ -29,7 +29,7 @@
 
 #按以下配置:
 
-    {
+{
     "server":"主机ip",
     "local_address":"127.0.0.1",
     "local_port":1080,
@@ -39,12 +39,13 @@
          "132":"密码",
          "3389":"密码",
          "53":"密码",
-         "443":"密码"
-    },
+         "443":"密码",
+        },
     "timeout":300,
     "method":"aes-256-cfb",
     "fast_open": false
 }
+
 
 # 2. 开启相应防火墙端口：
 
@@ -60,15 +61,15 @@
     
 # 写入以下内容保存后退出:
 
-        [Unit]
-        Description=Shadowsocks
+[Unit]
+Description=Shadowsocks
 
-        [Service]
-        TimeoutStartSec=0
-        ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
 
-        [Install]
-        WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
         
 # 执行以下命令启动 shadowsocks 服务：
 
